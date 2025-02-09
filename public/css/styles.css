@@ -3,8 +3,22 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  margin: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 80%;
+  margin: 15px;
+}
+
+h1, h2 {
+  margin: 15px 0;
+}
+
+p {
+  margin: 8px 0;
 }
 
 header {
@@ -16,33 +30,210 @@ header {
 nav ul{
   display: flex;
   list-style: none;
-  gap: 5px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 80%;
+  padding: 8px 12px;
+  position: relative;
 }
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
 }
 
 .hero-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  width: 100%;
   padding: 50px;
+}
+
+.hero-page p {
+  color: grey;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
+  
   width: 33%;
-  padding: 
 }
 
 .projects ul {
   list-style: none;
 }
 
+.projects ul li {
+  padding: 10px 0px;
+}
+
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 33%;
+}
+
+.work-experience article {
+  width: 85%;
+  padding: 7px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+
+  width: 33%;
+}
+
+.education p {
+  width: 85%;
+}
+
+.education ul {
+  list-style: none;
+}
+
+.education li::marker {
+  content: "- ";
+}
+
+.reviews {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.reviews h2 {
+  width: 100%;
+}
+
+.reviews blockquote {
+  border: 1px solid black;
+  border-radius: 15px;
+
+  width: 190px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.reviews blockquote footer {
+  justify-content: flex-start;
+  color: grey;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  font-size: 80%;
+}
+
+input, textarea {
+  padding: 16px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 80%;
+}
+
 footer {
   display: flex;
   justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .profile {
+    margin: 10px 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .hero-page {
+    padding: 25px 0;
+  }
+
+  .projects {
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+  }
+
+  .projects ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .work-experience {
+    align-items: center;
+    width: 100%;
+  }
+
+  .work-experience article {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 90%;
+    padding: 20px;
+  }
+
+  .education {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .reviews {
+    justify-content: center;
+  }
+
+  .reviews blockquote {
+    width: 70%;
+    padding: 20px;
+    margin: 5px 0px;
+  }
 }
